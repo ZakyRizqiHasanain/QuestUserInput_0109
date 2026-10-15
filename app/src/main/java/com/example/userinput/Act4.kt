@@ -3,6 +3,11 @@ package com.example.userinput
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedCard
+import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -26,6 +31,13 @@ fun formDataDiri (modifier: Modifier) {
     Column(modifier = Modifier.padding(top=50.dp),
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally){
-
+        OutlinedTextField(
+            value= TextNama,
+            singleLine = true,
+            shape = MaterialTheme.shapes.large,
+            modifier = modifier.width(250.dp),
+            label = {Text(text = "Nama Lengkap")},
+            onValueChange = {TextNama = it}
+        )
     }
 }
