@@ -1,5 +1,6 @@
 package com.example.userinput
 
+import android.R.attr.text
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -58,4 +59,13 @@ fun formDataDiri (modifier: Modifier) {
             }
         }
     }
+    OutlinedTextField(
+        value = TextAlamat,
+        singleLine = true,
+        modifier = Modifier.width(250.dp),
+        label = {Text("Alamat")},
+        onValueChange = {
+            TextAlamat = it
+        }
+    )
 }
